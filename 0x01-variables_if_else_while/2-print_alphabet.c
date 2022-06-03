@@ -8,10 +8,13 @@
  */
 int main(void)
 {
-	char low;
+	char alpha = 'a';
 
-	for (low = 'a'; low <= 'z'; low++)
-		putchar(low);
-	        putchar("\n");
+	while (alpha <= 'z')
+	{
+		putchar(alpha);
+	        alpha++;
+			}
+	putchar('\n');
 	return(0);
 }
