@@ -8,22 +8,17 @@
  */
 int main(void)
 {
-	int a;
-	int b;
+	int d;
 
-	for (a = 48; a <= 57; a++)
+	for (d = '0'; d <= '9'; d++)
 	{
-		for (b = 48; b <= 57; b++)
+		putchar(d);
+		if (d != '9')
 		{
-			putchar(a);
-			putchar(b);
-			if (a + b < 114)
-			{
-				putchar(44);
-				putchar(32);
-			}
+			putchar(',');
+			putchar(' ');
 		}
 	}
-	putchar(10);
+	putchar('\n';
 	return (0);
 }	
