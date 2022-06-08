@@ -1,5 +1,5 @@
-#ifndef _PUTCHAR_H
-#define _PUTCHAR_H
+#ifndef _ALX_H_
+#define _ALX_H_
 
 int _putchar(char c);
 void print_alphabet(void);
@@ -14,4 +14,4 @@ int times_table(void);
 int add(int, int);
 void print_to_98(int n);
 
-#endif /* _PUTCHAR_H */
+#endif /* _ALX_H_ */

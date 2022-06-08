@@ -6,12 +6,13 @@
  */
 int main(void)
 {
-	char *sh = "_putchar;
+	char c[] = "Alx;
+	int i;
 
-	while (*sh)
+	for (i = 0; i < 9; i++)
 	{
-		_putchar(*sh);
-		sh++;
+		_putchar(c[i]);
+		
 	}
 	_putchar('\n');
 
