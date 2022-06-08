@@ -1,4 +1,4 @@
-#ifindef _ALX_H_
+#ifndef _ALX_H_
 #define _ALX_H_
 
 int _putchar(char c);
@@ -9,7 +9,7 @@ int _isalpha(int c);
 int print_sign(int n);
 int _abs(int);
 int print_last_dogot(int);
-void 24_hours(void);
+void jack_bauer(void);
 int times_table(void);
 int add(int, int);
 void print_to_98(int n);
