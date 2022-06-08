@@ -1,6 +1,6 @@
-#include "_putchar.h"
+#include "main.h"
 /**
- * main - Pints _putchar
+ * main - Prints _putchar
  *
  * Return: Always 0 (Success)
  */
