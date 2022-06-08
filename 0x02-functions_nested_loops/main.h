@@ -10,8 +10,8 @@ int print_sign(int n);
 int _abs(int);
 int print_last_digit(int);
 void jack_bauer(void);
-int times_table(void);
-int add(int, int);
+void times_table(void);
+int add(int 1, int 2);
 void print_to_98(int n);
 
 #endif /* _PUTCHAR_H */
