@@ -1,19 +1,19 @@
-#include "main.h"
+#include "_putchar.h"
 /**
- * main - Entry point
+ * main - Pints _putchar
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char c[] = "Alx;
-	int i;
-
-	for (i = 0; i < 9; i++)
-	{
-		_putchar(c[i]);
-		
-	}
+	_putchar('-');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 	_putchar('\n');
 
 	return (0);
