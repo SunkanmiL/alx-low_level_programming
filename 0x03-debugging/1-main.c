@@ -3,6 +3,7 @@
  * main - causes an infinite loop
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 	int i;
