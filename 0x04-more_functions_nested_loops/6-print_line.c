@@ -1,4 +1,5 @@
 #inlcude "main.h"
+
 /**
  * print_line - draws a straight line in the terminal
  * @n: number of times the straight should be printed
@@ -6,18 +7,12 @@
  */
 void print_line(int n)
 {
-	int co;
+	int i = 0;
 
-	if (n <= 0)
+	if (n > 0)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (co = 1; co <= n; co++)
-		{
+		for (; i < n; i++)
 			_putchar('_');
-		}
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
