@@ -4,30 +4,31 @@
  * @n: input string
  * Return: string with capitalized words
  */
-char *cap_string(char *n)
+char *cap_string(char *targ)
 {
-	int i, x;
-	int cap = 32;
-	int separators[] = {',', ';', '.', '?', '"', '(', ')', '{' '}',
-		' ', '\n', '\t'};
+	char *sep = " \t\n,;.!?\"(){}";
+	int i = 0, j = 0, cap = 1, k = 0;
 
-	for (i = 0; n[i] != '\0'; i++)
-	{
-		if (n[i] >= 'a' && n[i] <= 'z')
+	for (; targ[i]; i++)
+		for (; j < i; j++)
 		{
-			n[i] = n[i] - cap;
-		}
-
-		cap = 0;
-
-		for (x = 0; x <= 12; x++)
-		{
-			if (n[i] == separators[x])
+			if (targ[j] >= 'A' && targ[j] <= 'Z')
+				cap = 0;
+			if ((targ[j] >= 'a' && targ[j] <= 'z') && cap == 1)
 			{
-				x = 12;
-				cap = 32;
+				targ[j] = ((targ[j] - 'a') + 'A');
+				cap = 0;
+			}
+			for (k = 0; sep[k]; k++)
+			{
+				if (targ[j] == sep[k])
+				{
+					cap = 1;
+					if(!(targ[j + 1] <= 'z' && targ[j + 1] 
+								>= 'a'))
+						cap = 0;
+				}
 			}
 		}
-	}
-	return (n);
+	return (targ);
 }
