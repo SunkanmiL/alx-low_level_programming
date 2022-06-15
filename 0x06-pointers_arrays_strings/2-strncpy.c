@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *strncpy - function that copies a string
+ * *_strncpy - function that copies a string
  * @src: copy from
  * @dest: copy to
  * @n: number of bytes
