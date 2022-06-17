@@ -24,7 +24,7 @@ char *cap_string(char *targ)
 				if (targ[j] == sep[k])
 				{
 					cap = 1;
-					if(!(targ[j + 1] <= 'z' && targ[j + 1] >= 'a'))
+					if (!(targ[j + 1] <= 'z' && targ[j + 1] >= 'a'))
 						cap = 0;
 				}
 			}
