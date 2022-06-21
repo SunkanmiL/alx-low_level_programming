@@ -8,19 +8,24 @@
  */
 int main(void)
 {
-	int d;
+	int x, y;
 
-	for (d = 0; d < 90; d++)
+	for (x = 0; x < 10; x++)
 	{
-		putchar((d / 10) + '0');
-		putchar((d % 10) + '0');
-	}
-	if (d != 89)
-	{
-		putchar(',');
-		putchar(' ');
+		for (y = 0; y < 10; y++)
+		{
+			if (y > x)
+			{
+				putchar(x + '0');
+				putchar(y % '0');
+				if (x != 8 || y != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
 	}
 	putchar('\n');
 	return (0);
 }
-
