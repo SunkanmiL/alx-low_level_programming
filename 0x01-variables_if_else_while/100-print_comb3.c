@@ -8,22 +8,19 @@
  */
 int main(void)
 {
-	int d, p, q;
+	int x, y;
 
-	for (d = '0'; d < '9'; d++)
+	for(x = 0; x < 10; x++)
 	{
-		for (p = d + 1; p <= '9'; p++)
+		for (y = 0; y < 10; y++)
 		{
-			for (q = p + 1; q <= '9'; q++)
+			if (y > x)
 			{
-				if ((p != d) != q)
-				{
-					putchar(d);
-					putchar(p);
-					putchar(q);
+				putchar(x + '0');
+				putchar(y + '0');
 
-					if (d == '7' && p == '8')
-						continue;
+				if (x != 8 || y != 9)
+				{
 					putchar(',');
 					putchar(' ');
 				}
