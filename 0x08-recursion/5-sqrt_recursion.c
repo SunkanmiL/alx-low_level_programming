@@ -1,25 +1,24 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * squareroot - checks if perfect square
- * @n: input
+ * sqr_root - checks if perfect square
+ * @n: input being squared
  * @root: square root
  * Return: square root of the number
  */
 
-int squareroot(int n, int root)
+int sqr_root(int n, int root)
 {
-	if (root < 1)
-		return (-1);
-	else if (root * root == n)
+	if (n == root * root)
 		return (root);
-	else
-		return (squareroot(n, root - 1));
+	else if (n < root * root)
+		return (-1);
+	return (sqr_root(n, root + 1));
 }
 
 /**
  * _sqrt_recursion - function that returns the square root of a number
- * @n: input
+ * @n: input being squared
  * Return: square root of the number
  */
 
@@ -27,6 +26,5 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	else
-		return (squareroot(n, 0));
+	return (sqr_root(n, 0));
 }
