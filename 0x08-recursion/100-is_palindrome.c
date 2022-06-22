@@ -14,7 +14,7 @@ int palindrome(char *s, int len, int a)
 		return (1);
 	if (s[len] != s[a])
 		return (0);
-	return (checker(s, len - 1, a + 1));
+	return (palindrome(s, len - 1, a + 1));
 }
 
 /**
@@ -30,6 +30,6 @@ int is_palindrome(char *s)
 	if (s[0] == '\0')
 		return (1);
 	len = _strlen_recursion(s);
-	b = checker(s, len - 1, 0);
+	b = palindrome(s, len - 1, 0);
 	return (b);
 }
