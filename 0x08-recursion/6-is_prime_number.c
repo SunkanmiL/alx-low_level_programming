@@ -21,7 +21,7 @@ int prime(int x, int y)
 }
 
 /**
- * is_prime_number - functions that returns 1 if the input integer is a primenum
+ * is_prime_number - that returns 1 if the input integer is a prime num
  * @n: input being tested
  * Return: Always 0 (Success)
  */
