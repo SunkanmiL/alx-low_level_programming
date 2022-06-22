@@ -8,7 +8,7 @@
  * Return: 1 if a string is palindrome, 0 if not
  */
 
-int palindrome(char *s, int len, len a)
+int palindrome(char *s, int len, int a)
 {
 	if (len <= a)
 		return (1);
