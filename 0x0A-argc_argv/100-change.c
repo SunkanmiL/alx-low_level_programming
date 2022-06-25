@@ -32,24 +32,14 @@ int main(int argc, char *argv[])
 
 int change(int cents)
 {
-	int a = 25, b = 10, c = 5, d = 2, e = 1;
+	int q = 25, d = 10, n = 5, t = 2, p = 1;
 	int coins;
 
 	while (cents > 0)
 	{
-		while (cents >= a)
+		while (cents >= q)
 		{
-			cents -= a;
-			coins++;
-		}
-		while (cents >= b)
-		{
-			cents -= b;
-			coins++;
-		}
-		while (cents >= c)
-		{
-			cents -= c;
+			cents -= q;
 			coins++;
 		}
 		while (cents >= d)
@@ -57,9 +47,19 @@ int change(int cents)
 			cents -= d;
 			coins++;
 		}
-		while (cents >= e)
+		while (cents >= n)
 		{
-			cents -= e;
+			cents -= n;
+			coins++;
+		}
+		while (cents >= t)
+		{
+			cents -= t;
+			coins++;
+		}
+		while (cents >= p)
+		{
+			cents -= p;
 			coins++;
 		}
 	}
