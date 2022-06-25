@@ -5,6 +5,7 @@
  * main - prints the min number of coins to make change
  * @argc: count of arguments
  * @argv: array pointing to arguments
+ * atoi is a function that converts a string into an int
  * Return: Always 0 (Success)
  */
 
