@@ -32,8 +32,8 @@ char *str_concat(char *s1, char *s2)
 	}
 	while (*s2)
 	{
-		array[j] = *s2;
-		j++;
+		array[i] = *s2;
+		i++;
 		s2++;
 	}
 	return (array);
