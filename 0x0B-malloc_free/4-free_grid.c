@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib.H>
+#include <stdlib.h>
 /**
  * free_grid - function that frees 2dim grid previously created
  * @grid: address of the two dimensional grid
