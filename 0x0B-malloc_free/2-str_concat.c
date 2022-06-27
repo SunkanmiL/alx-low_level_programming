@@ -30,10 +30,8 @@ char *str_concat(char *s1, char *s2)
 		lens2++;
 		s2++;
 	}
-	
 	s2 = starts2;
 	new_str = malloc(sizeof(char) * (lens1 + lens2 + 1));
-	
 	starts1 = new_str;
 	if (new_str == NULL)
 		return (NULL);
