@@ -81,8 +81,7 @@ char **strtow(char *str)
 				c++;
 			}
 			words[b][c] = '\0';
-			b++;
-			str++;
+			b++; c = 0; len = 0; str++;
 		}
 	}
 	return (words);
