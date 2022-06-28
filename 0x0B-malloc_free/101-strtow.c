@@ -6,7 +6,6 @@
  * @str: string being passed to check for words
  * Return: number of words
  */
-
 int number(char *str)
 {
 	int a, num = 0;
@@ -24,7 +23,6 @@ int number(char *str)
 	}
 	return (num);
 }
-
 /**
  * free_everything - frees the memory
  * @string: pointer values being passed for freeing
@@ -81,7 +79,9 @@ char **strtow(char *str)
 				c++;
 			}
 			words[b][c] = '\0';
-			b++; c = 0, len = 0; str++;
+			b++;
+			c = 0, len = 0;
+			str++;
 		}
 	}
 	return (words);
