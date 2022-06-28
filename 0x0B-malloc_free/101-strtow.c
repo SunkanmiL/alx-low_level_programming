@@ -1,13 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
  * number - function to calculate number of words
  * @str: string being passed to check for words
  * Return: number of words
  */
-
 int number(char *str)
 {
 	int a, num = 0;
@@ -42,7 +40,6 @@ void free_everything(char **string, int i)
  * @str: input pointer of the string to split
  * Return: Nothing
  */
-
 char **strtow(char *str)
 {
 	int total_words = 0, b = 0, c = 0, len = 0;
