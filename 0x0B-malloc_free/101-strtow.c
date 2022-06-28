@@ -38,13 +38,11 @@ void free_everything(char **string, int i)
 		free(string[--i]);
 	free(string);
 }
-
 /**
  * **strtow - function that splits a string into words
  * @str: input pointer of the string to split
  * Return: Nothing
  */
-
 char **strtow(char *str)
 {
 	int total_words = 0, b = 0, c = 0, len = 0;
@@ -82,10 +80,8 @@ char **strtow(char *str)
 				found_word++;
 				c++;
 			}
-			words[b][c] = '\0';
-			b++;
-			c = 0; len = 0;
-			str++;
+			words[b][c] = '\0'; b++;
+			c = 0; len = 0; str++;
 		}
 	}
 	return (words);
