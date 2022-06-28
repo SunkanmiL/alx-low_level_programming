@@ -70,7 +70,6 @@ char **strtow(char *str)
 				len++;
 				str++;
 			}
-
 			words[b] = malloc(sizeof(char) * (len + 1));
 			if (words[b] == 0)
 			{
@@ -84,7 +83,8 @@ char **strtow(char *str)
 				c++;
 			}
 			words[b][c] = '\0';
-			b++; c = 0; len = 0; str++;
+			b++;
+			c = 0; len = 0; str++;
 		}
 	}
 	return (words);
