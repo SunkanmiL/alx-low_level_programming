@@ -29,7 +29,6 @@ int number(char *str)
  * @i: counter
  * Return: Always 0 (Success)
  */
-
 void free_everything(char **string, int i)
 {
 	for (; i > 0;)
