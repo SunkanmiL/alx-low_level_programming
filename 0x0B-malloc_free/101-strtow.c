@@ -9,6 +9,7 @@
 int number(char *str)
 {
 	int a, num = 0;
+
 	for (a = 0; str[a] != '\0'; a++)
 	{
 		if (*str == ' ')
