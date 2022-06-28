@@ -4,6 +4,7 @@
 /**
  * number - function to calculate number of words
  * @str: string being passed to check for words
+ * Return: number of words
  */
 int number(char *str)
 {
@@ -26,6 +27,7 @@ int number(char *str)
  * free_everything - frees the memory
  * @string: pointer values being passed for freeing
  * @i: counter
+ * Return: Always 0 (Success)
  */
 void free_everything(char **string, int i)
 {
