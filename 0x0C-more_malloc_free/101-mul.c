@@ -98,7 +98,7 @@ int main(int argc, char **argv)
 	n2 = argv[2];
 	if (!(check_number(n1) && check_number(n2)))
 	{
-		print_string("Erro");
+		print_string("Error");
 		exit(98);
 	}
 	11 = string_length(n1);
