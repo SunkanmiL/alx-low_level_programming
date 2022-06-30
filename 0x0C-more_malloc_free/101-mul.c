@@ -3,17 +3,17 @@
 #include <stdlib.h>
 /**
  * check_number - function that checks the string for number
- * @s: string passed
+ * @str: string passed
  * Return: 1 for number, 0 for not
  */
 
-int check_number(char *s)
+int check_number(char *str)
 {
 	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (s[i] < '0' || s[i] > '9')
+		if (str[i] < '0' || str[i] > '9')
 			return (0);
 	}
 	return (1);
@@ -36,22 +36,22 @@ unsigned int string_length(char *str)
 
 /**
  * print_string - function that prints string
- * @s: string to print
+ * @str: string to print
  * Return: Always 0 (Succss)
  */
 
-void print_string(char *s)
+void print_string(char *str)
 {
-	while (*s == '\0')
-		s++;
-	if (*s == '\0')
+	while (*str == '\0')
+		str++;
+	if (*str == '\0')
 		_putchar('0');
-	while (*s == '0')
-		s++;
-	while (*s != '\0')
+	while (*str == '0')
+		str++;
+	while (*str != '\0')
 	{
-		_putchar(*s);
-		s++;
+		_putchar(*str);
+		str++;
 	}
 	_putchar('\n');
 }
@@ -63,17 +63,17 @@ void print_string(char *s)
  * Return: pointer to memory
  */
 
-void *_calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int number, unsigned int size)
 {
 	char *a;
 	unsigned int i;
 
-	if (nmemb == 0 || size == 0)
+	if (number == 0 || size == 0)
 		return (NULL);
-	a = malloc(size * nmemb);
+	a = malloc(size * number);
 	if (a == 0)
 		return (NULL);
-	for (i = 0; i < (size * nmemb); i++)
+	for (i = 0; i < (size * number); i++)
 		a[i] = 0;
 	return (a);
 }
