@@ -10,5 +10,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 int check_number(char *str);
 unsigned int string_length(char *str);
 void print_string(char *str);
+void *_calloc(unsigned int number, unsigned int size);
 
 #endif /* MAIN_H */
