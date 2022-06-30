@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * _calloc - function that allocates memory for an array 
- * @nnemb: array number
+ * @nmemb: array number
  * @size: size of the memory to print
  * Return: NULL if malloc fails
  */
