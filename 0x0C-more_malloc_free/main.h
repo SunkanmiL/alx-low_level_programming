@@ -11,6 +11,5 @@ int check_number(char *str);
 unsigned int string_length(char *str);
 void print_string(char *str);
 void *_calloc(unsigned int number, unsigned int size);
-int main(int argc, char **argv);
 
 #endif /* MAIN_H */
