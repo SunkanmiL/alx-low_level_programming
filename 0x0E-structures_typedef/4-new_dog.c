@@ -1,11 +1,11 @@
-#include "main.h"
+#include "dog.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 char *_strdup(char *str);
 
 /**
- * new_dog - function that creates a new dog
+ * *new_dog - function that creates a new dog
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
