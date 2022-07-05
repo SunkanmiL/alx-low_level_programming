@@ -2,12 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strdup - function that returns a pointer to a newly allocated space memory
+ * _strdupk - function that returns a pointer to a newly allocated space memory
  * @str: string
  * Return: pointer of duplicated string
  */
 
-char *_strdup(char *str)
+char *_strdupk(char *str)
 {
 	char *ptr;
 	int i, j = 0;
