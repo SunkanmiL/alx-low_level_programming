@@ -10,23 +10,29 @@
 char *_strdup(char *str)
 {
 	char *ptr;
-	int i, j = 0;
+	int len;
 
 	if (str == NULL)
+	{
 		return (NULL);
-	while (str[i] != '\0')
-		i++;
-	ptr = malloc(sizeof(char) * (i + 1));
+	}
+	len = 0;
+	while (str[len] != '\0')
+	{
+		len++;
+	}
+	ptr = malloc(sizeof(char) * len + 1);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	while (str[j] != '\0')
+	len = 0;
+	while (str[len] != '\0')
 	{
-		ptr[j] = str[j];
-		j++;
+		ptr[len] = str[len];
+		len++;
 	}
-	ptr[j] = '\0';
+	ptr[len] = '\0';
 	return (ptr);
 }
 
@@ -40,25 +46,29 @@ char *_strdup(char *str)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_name;
+	dog_t *new_name = NULL;
 
 	if (name == NULL || owner == NULL)
+	{
 		return (NULL);
+	}
 
 	new_name = malloc(sizeof(dog_t));
 	if (new_name == NULL)
+	{
 		return (NULL);
-	(*new_name).name = _strdup(name);
-	if ((*new_name).name == NULL)
+	}
+	new_name->name = _strdup(name);
+	if (new_name->name == NULL)
 	{
 		free(new_name);
 		return (NULL);
 	}
-	(*new_name).age = age;
-	(*new_name).owner = _strdup(owner);
-	if ((*new_name).owner == NULL)
+	new_name->age = age;
+	new_name->owner = _strdup(owner);
+	if (new_name->owner == NULL)
 	{
-		free((*new_name).name);
+		free(new_name->name);
 		free(new_name);
 		return (NULL);
 	}
