@@ -1,6 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+int get_len(int i);
+char *str_cpy(char *dest, char *src);
 /**
  * new_dog - function that creates a new dog
  * @name: name of dog
