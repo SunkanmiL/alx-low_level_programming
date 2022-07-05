@@ -14,36 +14,36 @@ char *_strdup(char *str);
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog = NULL;
+	dog_t *new_name = NULL;
 
 	if (name == NULL || owner == NULL)
 	{
 		return (NULL);
 	}
-	new_dog = malloc(sizeof(dog_t));
-	if (new_dog == NULL)
+	new_name = malloc(sizeof(dog_t));
+	if (new_name == NULL)
 	{
 		return (NULL);
 	}
 
-	new_dog->name = _strdup(name);
+	new_name->name = _strdup(name);
 
-	if (new_dog-> == NULL)
+	if (new_name-> == NULL)
 	{
 		free(p);
 		return (NULL);
 	}
 
-	new_dog->age = age;
-	new_dog->owner = _strdup(owner);
+	new_name->age = age;
+	new_name->owner = _strdup(owner);
 
-	if (new_dog->owner == NULL)
+	if (new_name->owner == NULL)
 	{
-		free(new_dog->name);
-		free(new_dog);
+		free(new_name->name);
+		free(new_name);
 		return (NULL);
 	}
-	return (new_dog);
+	return (new_name);
 }
 
 /**
