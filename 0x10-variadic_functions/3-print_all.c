@@ -58,7 +58,7 @@ void print_s(va_list ap)
 
 void print_all(const char * const format, ...)
 {
-	char *sep = "";
+	char *sep = ", ";
 	int i, n;
 	va_list ap;
 
@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", sep);
 				list[n].type(ap);
-				sep = ", ";
+				sep = "";
 			}
 			n++;
 		}
