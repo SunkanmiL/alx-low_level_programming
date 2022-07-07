@@ -4,7 +4,6 @@
 /**
  * print_all - function that prints anything
  * @format: a list of types of arguments passed to the function
- * @ap: list of arguments passed into the main function
  * Return: Always 0 (Success)
  */
 
