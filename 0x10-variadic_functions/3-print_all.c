@@ -1,93 +1,48 @@
 #include "variadic_functions.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdarg.h>
-/**
- * print_char - function that prints character
- * @ap: list of arguments passed into the main function
- * Return: Always 0 (Success)
- */
-
-void print_char(va_list ap)
-{
-	printf("%c", va_arg(ap, int));
-}
-
-/**
- * print_integer - function that prints integer
- * @ap: list of arguments passed into the main function
- * Return: Always 0 (Success)
- */
-
-void print_integer(va_list ap)
-{
-	printf("%d", va_arg(ap, int));
-}
-
-/**
- * print_float - function that prints float
- * @ap: list of arguments passed into the main function
- * Return: Always 0 (Success)
- */
-
-void print_float(va_list ap)
-{
-	printf("%f", va_arg(ap, double));
-}
-
-/**
- * print_s - function that prints string
- * @ap: list of arguments passed into the main function
- * Return: Always 0 (Success)
- */
-
-void print_s(va_list ap)
-{
-	char *str;
-
-	str = va_arg(ap, char *);
-	if (str == NULL)
-		str = ("(nil)");
-	printf("%s", str);
-}
-
 /**
  * print_all - function that prints anything
  * @format: a list of types of arguments passed to the function
+ * @ap: list of arguments passed into the main function
  * Return: Always 0 (Success)
  */
 
 void print_all(const char * const format, ...)
 {
-	char *sep = ", ";
-	int i, n;
 	va_list ap;
-
-	print_t list[] = {
-		{"c", print_char},
-		{"i", print_integer},
-		{"f", print_float},
-		{"s", print_s},
-		{NULL, NULL},
-	};
+	int i = 0, n = 0;
+	char *sep = ", ";
+	char *str;
 
 	va_start(ap, format);
-	i = 0;
-	while ((format != NULL) && (format[i] != '\0'))
-	{
-		n = 0;
-		while (list[n].name != NULL)
-		{
-			if (*(list[n].name) == format[i])
-			{
-				printf("%s", sep);
-				list[n].type(ap);
-				sep = "";
-			}
-			n++;
-		}
+	while (format && format[i])
 		i++;
-		n = 0;
+	while (format && format[n])
+	{
+		if (n == (i - 1))
+		{
+			sep = "";
+		}
+		switch (format[n])
+		{
+			case 'c':
+				printf("%c%s", va_arg(ap, int), sep);
+				break;
+			case 'i':
+				printf("%d%s", va_arg(ap, int), sep);
+				break;
+			case 'f':
+				printf("%f%s", va_arg(ap, double), sep);
+				break;
+			case 's':
+				str = va_arg(ap, char *);
+				if (str == NULL)
+					str = "(nil)";
+				printf("%s%s", str, sep);
+				break;
+		}
+		n++;
 	}
 	printf("\n");
 	va_end(ap);
