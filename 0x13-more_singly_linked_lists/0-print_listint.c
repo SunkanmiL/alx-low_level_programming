@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * print_list - function that prints all the elements of a listint_t list
+ * print_listint - function that prints all the elements of a listint_t list
  * @h: Pointer to elements of the list
  * Return: 0 if str is null
  */
