@@ -3,7 +3,7 @@
 /**
  * print_listint_safe - function that prints a listint_t linked list
  * @head: pointer to the head node of the linked list
- * Return: The number of nodes. Exits with 98 on failure
+ * Return: the number of nodes, exits with 98 on failure
  */
 
 size_t print_listint_safe(const listint_t *head)
