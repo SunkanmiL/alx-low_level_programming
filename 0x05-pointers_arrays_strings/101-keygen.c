@@ -1,61 +1,32 @@
-#include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 /**
- * generates random valid passwords for the program 101-crackme
- * Return: Always 0 (Success)
+ * main - generates random valid passwords
+ * Return: Always 0.
  */
-void randomPasswordGeneration(int N)
+
+int main(void)
 {
-	int i = 0;
+	int pass[100];
+	int index, count, s;
 
-	int randomizer = 0;
+	count = 0;
 
-	srand((unsigned int)(time(NULL)));
+	srand(time(NULL));
 
-	char numbers[] = "0123456789";
-
-	char letter[] = "abcdefghijklmnoqprstuvwxyz";
-	
-	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUVWXYZ";
-
-	char symbols[] = "!@#$^&*?";
-	
-	char password[N];
-
-	randomizer = rand() % 4;
-
-	for (i = 0; i < N; i++)
+	for (index = 0; index < 100; index++)
 	{
-		if (randomizer == 1)
+		pass[index] = rand() % 78;
+		count += (pass[index] + '0');
+		putchar(pass[index] + '0');
+		if ((2772 - count) - '0' < 78)
 		{
-			password[i] = numbers[rand() % 10];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else if (randomizer == 2)
-		{
-			password[i] = symbols[rand() % 8];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
-		}
-		else
-		{
-			password[i] = letter[rand() % 26];
-			randomizer = rand() % 4;
-			printf("%c", password[i]);
+			s = 2772 - count - '0';
+			count += s;
+			putchar(s + '0');
+			break;
 		}
 	}
-}
-
-// Driver Code
-int main()
-{
-	int N = 10;
-
-	randomPasswordGeneration(N);
-
 	return (0);
 }
