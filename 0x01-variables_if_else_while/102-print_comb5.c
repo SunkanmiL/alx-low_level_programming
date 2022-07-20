@@ -1,28 +1,36 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
+/* more headers goes there */
 /**
- * main - Entry point
+ * main - program prints all possible combination of two digits
  *
- * Return: Always 0 (Success)
+ * Description - program prints all possible combination of two digits
+ * Return: Always 0
  */
+/* betty style doc for function main goes there */
+
 int main(void)
 {
-	int x, y;
+	int num1;
+	int num2;
 
-	for (x = 0; x <= 99; x++)
+	for (num1 = 0 ; num1 <= 98 ; num1++)
 	{
-		for (y = x + 1; y <= 99; y++)
-		{
-			putchar((x / 10) + '0');
-			putchar((x % 10) + '0');
-			putchar(' ');
-			putchar((y / 10) + '0');
-			putchar((y % 10) + '0');
-
-			if (x == 99 && y == 99)
-				continue;
-			putchar(',');
-			putchar(' ');
-		}
+	for (num2 = num1 + 1 ; num2 <= 99 ; num2++)
+	{
+	putchar((num1 / 10) + '0');
+	putchar((num1 % 10) + '0');
+	putchar(' ');
+	putchar((num2 / 10) + '0');
+	putchar((num2 % 10) + '0');
+	if (num1 == 98 && num2 == 99)
+	{
+	continue;
+	}
+	putchar(',');
+	putchar(' ');
+	}
 	}
 	putchar('\n');
 	return (0);
