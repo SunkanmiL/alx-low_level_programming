@@ -6,7 +6,7 @@
  * POSIX standard output
  * @filename: pointer to the name of the file
  * @letters: the number of letters to read and print
- * Return: 0 if filename is NULL or write fails
+ * Return: 0 if filename is NULL or filename fails
  * the actual number of letters it could read and print
  */
 
