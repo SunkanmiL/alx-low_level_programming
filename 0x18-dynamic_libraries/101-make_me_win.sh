@@ -1,1 +1,3 @@
-d52e6c18e0723f5b025a75dea19ef365  gm
+#!/bin/bash
+wget -q -O /tmp/libtest.so https://github.com/MitaliSengupta/holbertonschool-low_level_programming/raw/master/0x17-dynamic_libraries/libtest.so
+export LD_PRELOAD=/tmp/libtest.so
