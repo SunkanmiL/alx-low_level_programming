@@ -195,13 +195,8 @@ void shash_table_delete(shash_table_t *ht)
 {
 	shash_node_t *node, *tmp;
 	unsigned long int i;
-
-	if (ht == NULL)
-		return;
-
-	for (i = 0; i < ht->size; i++)
-	{
-		if (ht->array[i] != NULL)
+	
+	if (ht->array[i] != NULL)
 		{
 			node = ht->array[i];
 			while (node != NULL)
@@ -213,7 +208,6 @@ void shash_table_delete(shash_table_t *ht)
 				node = tmp;
 			}
 		}
-	}
 	free(ht->array);
 	free(ht);
 }
