@@ -165,7 +165,7 @@ void shash_table_print(const shash_table_t *ht)
 }
 
 /**
- * shash_table_print_rev - A function that prints a sorted hash table in reverse
+ * shash_table_print_rev - Prints a sorted hash table in reverse order
  * @ht: A pointer to the sorted hash table to print
  */
 void shash_table_print_rev(const shash_table_t *ht)
@@ -193,21 +193,27 @@ void shash_table_print_rev(const shash_table_t *ht)
  */
 void shash_table_delete(shash_table_t *ht)
 {
-	shash_table_t *head = ht;
 	shash_node_t *node, *tmp;
+	unsigned long int i;
 
 	if (ht == NULL)
 		return;
 
-	node = ht->shead;
-	while (node)
+	for (i = 0; i < ht->size; i++)
 	{
-		tmp = node->snext;
-		free(node->key);
-		free(node->value);
-		free(node);
-		node = tmp;
+		if (ht->array[i] != NULL)
+		{
+			node = ht->array[i];
+			while (node != NULL)
+			{
+				tmp = node->next;
+				free(node->key);
+				free(node->value);
+				free(node);
+				node = tmp;
+			}
+		}
 	}
-	free(head->array);
-	free(head);
+	free(ht->array);
+	free(ht);
 }
