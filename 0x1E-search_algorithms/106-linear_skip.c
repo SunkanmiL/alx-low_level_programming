@@ -3,7 +3,6 @@
 /**
  * linear_skip - Searches for a value in a sorted skip list of integers
  * @list: A pointer to the  head of the linked list to search in
- * @size: The number of nodes in list
  * @value: The value to search for
  * Return: If the value is not present or the head of the list is NULL, NULL
  *         Otherwise, a pointer to the first node where the value is located
